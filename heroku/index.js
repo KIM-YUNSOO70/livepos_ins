@@ -48,6 +48,7 @@ app.post('/facebook', function(req, res) {
   console.log('request header X-Hub-Signature validated');
   // Process the Facebook updates here
   received_updates.unshift(req.body);
+  res.send('<pre>' + JSON.stringify(received_updates, null, 2) + '</pre>');
   res.sendStatus(200);
 });
 
@@ -56,6 +57,7 @@ app.post('/instagram', function(req, res) {
   console.log(req.body);
   // Process the Instagram updates here
   received_updates.unshift(req.body);
+  res.send('<pre>' + JSON.stringify(received_updates, null, 2) + '</pre>');
   res.sendStatus(200);
 });
 
