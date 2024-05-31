@@ -26,6 +26,9 @@ app.get('/', function(req, res) {
 });
 
 app.get(['/facebook', '/instagram'], function(req, res) {
+  console.log('receive data from instagram webhooks!!!\n');
+  console.log(req.body);
+    
   if (
     req.query['hub.mode'] == 'subscribe' &&
     req.query['hub.verify_token'] == token
