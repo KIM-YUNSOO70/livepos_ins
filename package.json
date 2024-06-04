@@ -4,7 +4,7 @@
   "description": "Graph API Webhooks Sample",
   "main": "index.js",
   "scripts": {
-    "start": "node heroku/index.js"
+    "start": "node heroku/index.js > instagram_stdout.log 2> instagram_err.log"
   },
   "dependencies": {
     "body-parser": "~1.15.0",
